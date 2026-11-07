@@ -1,0 +1,10 @@
+# dsh-nokia-pinball profile patch layer
+#
+# 没有 dsh.bundle.patch 这行声明，`install_bundle` 只会把它当普通依赖装进去，
+# 进程不会加载 —— 表现就是「装成功但没反应」。
+#
+# id 必须与 host 入口 index.js 的 `export const name` 一致。
+# name 是包名，dsh 由它解析 host 入口（main）与 client 入口（exports["./client"]）。
+- insert:
+    - id: nokia-pinball
+      name: 'dsh-nokia-pinball'

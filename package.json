@@ -1,0 +1,63 @@
+{
+  "name": "dsh-nokia-pinball",
+  "version": "0.1.0",
+  "description": "诺基亚弹珠台 · Pinball —— 竖屏像素台面、重力钢珠、左右弹片、缓冲器/靶子/滚道、发射蓄力、3 球制与高分榜，复刻 07-09 年 J2ME 手机手感。DeepSeek Harness 悬浮插件。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "client-ui",
+    "pinball",
+    "nokia",
+    "retro-game",
+    "j2me",
+    "canvas-game"
+  ],
+  "license": "MIT",
+  "author": "zhanghao3693",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanghao3693/dsh-nokia-pinball.git"
+  },
+  "homepage": "https://github.com/zhanghao3693/dsh-nokia-pinball#readme",
+  "bugs": {
+    "url": "https://github.com/zhanghao3693/dsh-nokia-pinball/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.0-rc.5"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "icon": "./icon.svg"
+}
